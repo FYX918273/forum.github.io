@@ -14,7 +14,7 @@
 
         body {
             min-height: 100vh;
-            background-image: url('banner1.jpg'); /* 随机高清背景图 */
+            background-image: url('banner1.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -24,7 +24,6 @@
             position: relative;
         }
 
-        /* 添加半透明遮罩增强文字可读性 */
         body::after {
             content: "";
             position: absolute;
@@ -40,20 +39,26 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 3rem 5rem;
+            padding: 2rem 5vw;
             border-radius: 20px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             border: 1px solid rgba(255, 255, 255, 0.18);
             text-align: center;
             position: relative;
             z-index: 1;
+            min-width: 280px;
+            max-width: 800px;
+            width: 90%;
         }
 
         h1 {
             color: #ffffff;
             margin-bottom: 2rem;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 0 10px;
         }
 
         .btn {
@@ -76,7 +81,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         }
 
-        /* 加载提示 */
         .loading {
             display: none;
             color: white;
@@ -98,18 +102,15 @@
     </div>
 
     <script>
-        // 显示加载提示
         function showLoading() {
             const loader = document.getElementById('loading');
             loader.style.display = 'block';
             
-            // 3秒后自动隐藏提示
             setTimeout(() => {
                 loader.style.display = 'none';
             }, 3000);
         }
 
-        // 备用跳转方案
         function openForum() {
             window.open(
                 'http://111.165.108.42:808/forum/index.php',
