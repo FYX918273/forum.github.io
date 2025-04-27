@@ -3,86 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天津城职论坛最新网址</title>
+    <title>天津城职论坛最新地址</title>
     <style>
-        body, html {
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            box-sizing: border-box;
         }
-        
+
         body {
-            background-image: url('banner1.jpg');
+            min-height: 100vh;
+            background-image: url('banner1.jpg'); /* 替换为你想要的背景图 */
             background-size: cover;
             background-position: center;
-        }
-        
-        .container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            font-family: 'Microsoft YaHei', sans-serif;
         }
-        
+
         .glass-container {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
-            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 2rem 4rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             border: 1px solid rgba(255, 255, 255, 0.18);
             text-align: center;
-            max-width: 600px;
-            width: 90%;
         }
-        
+
         h1 {
-            font-size: 2rem;
+            color: #ffffff;
             margin-bottom: 1.5rem;
-            color: #333;
-            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
-        a {
-            background: #1e90ff;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
+
+        .btn {
             display: inline-block;
-            cursor: pointer;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            backdrop-filter: blur(5px);
         }
-        
-        a:hover {
-            background: #0077cc;
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="glass-container">
-            <h1>天津城职论坛最新网址</h1>
-            <a href="javascript:void(0)" target="_blank" id="forum-link">点击跳转</a>
-        </div>
+    <div class="glass-container">
+        <h1>天津城职论坛最新地址</h1>
+        <a href="http://111.165.102.13:808/forum/index.php" target="_blank" class="btn">点击进入</a>
     </div>
-
-    <script>
-        document.getElementById('forum-link').addEventListener('click', function() {
-            window.open('redirect.html', '_blank');
-        });
-    </script>
 </body>
 </html>
